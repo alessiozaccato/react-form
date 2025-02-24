@@ -57,17 +57,22 @@ function App() {
           }
 
         </section>
-        <section>
+        <section className='container '>
           <form onSubmit={addTask}>
-            <input
-              type="text"
-              className="form-control"
-              placeholder="Cosa vorresti fare?"
-              name='activity'
-              value={newTask}
-              onChange={(e) => setNewTask(e.target.value)}
-            />
-            <button className="btn btn-primary mt-3">Aggiungi</button>
+            <div className='col-4 mx-auto'>
+              <input
+                type="text"
+                className="form-control "
+                placeholder="Cosa vorresti fare?"
+                name='activity'
+                value={newTask}
+                onChange={(e) => setNewTask(e.target.value)}
+              />
+            </div>
+
+            <div className='row mt-3'>
+              <button className="col-2 btn btn-primary mx-auto">Aggiungi</button>
+            </div>
           </form>
         </section>
       </main>
